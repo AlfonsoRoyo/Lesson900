@@ -11,7 +11,7 @@ namespace p1_Motor
     public class cMaquina
     {
            // AQUI SE CREAN LOS ATRIBUTOS.................................................
-        Double PotenciaTotal; // Atributos de las variables
+        Double PotenciaTotal; 
         Double AmpersTotal;
         public enum model // Modelo tipo enumerado , se crea de esta forma
         {
@@ -21,14 +21,14 @@ namespace p1_Motor
         }
         private model Modelo; // aqui creamos el atributo del tipo de variable , no se usa
        
-        //Matriz de Numero de Motores        
+        //Matriz de la clase motores      
         cMotor[] Motores = null;
 
 
         // AQUI SE CREAN LAS PROPIEDADES.....................................................
         public double potenciaTotal { get => PotenciaTotal; set => PotenciaTotal = value; } // las propiedades , se crea para poder tener acceso desde otra clase
         public double ampersTotal { get => AmpersTotal; set => AmpersTotal = value; }
-        public cMotor[] motores { get => Motores; set => Motores = value; }  // se genera las propiedades de la matriz nom para poder acceder a ella.
+        public cMotor[] motores { get => Motores; set => Motores = value; }  
         public model modelo { get => Modelo; set => Modelo = value; }
         public static cMaquina Hidrosolver { get; internal set; }
 
@@ -39,32 +39,26 @@ namespace p1_Motor
      
          public cMaquina(model v)  
             {
-            Console.WriteLine("has entrado en la clase maquina");
-            Console.ReadLine();
-           
+            Console.WriteLine("has entrado en la clase maquina"); Console.ReadLine();
             if (model.Agitador == v ) // compara con la lista de enumerados si es Agitador pondrá un 2 en la variable nom (numero de motores)
             {
-                Console.WriteLine("has selecionado Agitador");
-                Console.ReadLine();
+                Console.WriteLine("has selecionado Agitador"); Console.ReadLine();
                 Motores = new cMotor[2];
             }
             if (model.Diluidor == v)
             {
-                Console.WriteLine("has selecionado Diluidor");
-                Console.ReadLine();
+                Console.WriteLine("has selecionado Diluidor"); Console.ReadLine();
                 Motores = new cMotor[3];
             }
             if (model.Hidrosolver == v)
             {
-                Console.WriteLine("has selecionado HIdrosolver");
-                Console.ReadLine();
-                 Motores = new cMotor[4];
+                Console.WriteLine("has selecionado HIdrosolver"); Console.ReadLine();
+                Motores = new cMotor[4];
             }
             for (int i = 0; i < Motores.Length; i++)
             {
-                Console.WriteLine("En cMaquina, iterando el numero de motores " + Motores );
-                Console.ReadLine();
-                 Motores[i] = new cMotor();
+                Console.WriteLine("En cMaquina, iterando el numero de motores " + Motores ); Console.ReadLine();
+                Motores[i] = new cMotor();
 
             }
         

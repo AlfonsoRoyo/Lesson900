@@ -106,6 +106,7 @@ namespace p1_Motor
             System.IO.FileStream file = System.IO.File.Create(path);
             writer.Serialize(file,this);
             file.Close();
+           
         }
     }
 }
