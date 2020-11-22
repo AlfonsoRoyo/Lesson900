@@ -9,6 +9,8 @@ namespace p1_Motor
    public class cMotor
 
     {
+
+        public cMotor() { }
         // EJERCICIO 1, Crear una clase motor con los siguientes atribuos y propiedades
         Double Potencia; // Atributos de las variables
         Double Ampers;

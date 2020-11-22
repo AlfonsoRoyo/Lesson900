@@ -36,13 +36,16 @@ namespace p1_Motor
             DateTime dtinput1 = new DateTime(2042, 12, 24);
             DateTime dtoutput1 = new DateTime(2042, 12, 24);
             DateTime dtinput2 = new DateTime(2020, 09, 02);
+
+
+
             DateTime dtoutput2 = new DateTime(2021,08, 03);
 
             Console.WriteLine("Desde Program,vas a llamar al constructor de cProyecto"); Console.ReadLine();
             cProyecto cp1 = new cProyecto("Ateca", "Josep", new DateTime(2020,11,8), dtoutput1, cMaquina.Hidrosolver, cProyecto.estado.EnCurso);
             cProyecto cp2 = new cProyecto("Ateca", "Josep", dtinput2, dtoutput2, cMaquina.Hidrosolver, cProyecto.estado.EnCurso);
-
-            cp2.WriteXML();                             
+            Console.WriteLine(dtoutput1.ToString("y-M-d H:m:ss"));
+            cp1.WriteXML();                             
             cp1.ReadXML();
             Console.ReadKey();
         }

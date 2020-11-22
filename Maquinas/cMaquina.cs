@@ -22,8 +22,7 @@ namespace p1_Motor
         private model Modelo; // aqui creamos el atributo del tipo de variable , no se usa
        
         //Matriz de la clase motores      
-        cMotor[] Motores = null;
-
+        public cMotor[] Motores = null;
 
         // AQUI SE CREAN LAS PROPIEDADES.....................................................
         public double potenciaTotal { get => PotenciaTotal; set => PotenciaTotal = value; } // las propiedades , se crea para poder tener acceso desde otra clase
@@ -31,12 +30,10 @@ namespace p1_Motor
         public cMotor[] motores { get => Motores; set => Motores = value; }  
         public model modelo { get => Modelo; set => Modelo = value; }
         public static cMaquina Hidrosolver { get; internal set; }
-
-
         //EJERCICIO 3 // Añadir un constructor a la clase maquina para introducir el modelo de la maquina,
         // segun el modelo se delimitara el numero de elementos de la matriz de motores
-        public cMaquina() { } //llamada al contructor de la clase cMaquina
-     
+        public cMaquina() { } //llamada al contructor de la clase cMaquina    
+
          public cMaquina(model v)  
             {
             Console.WriteLine("has entrado en la clase maquina"); Console.ReadLine();

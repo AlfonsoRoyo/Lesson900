@@ -17,7 +17,7 @@ namespace p1_Motor
         string Cliente;
         DateTime FechaEntrada = new DateTime(2042, 12, 24);
         DateTime FechaSalida = new DateTime(2042, 12, 24);
-        cMaquina maq = null;
+        public cMaquina maq = null;
 
         public enum estado // Modelo tipo enumerado , se crea de esta forma
         {
@@ -27,7 +27,7 @@ namespace p1_Motor
         }       
         estado Estado; // aqui creamos el atributo del tipo de variable
  
-        cMaquina[] Nom1 = null; // aqui creamos el atributo del tipo de variable
+       public cMaquina[] Nom1 = null; // aqui creamos el atributo del tipo de variable
         
         // AQUI SE CREAN LAS PROPIEDADES.....................................................
         public string nombre { get => Nombre; set => Nombre = value; }
@@ -45,6 +45,7 @@ namespace p1_Motor
             this.FechaSalida = fechaOutput;
             this.maq = mq;
             this.Estado = st;
+            Console.WriteLine(fechaInput.ToString("Y-M-d H:m:ss"));
         }
         public cProyecto(string nombre, string cliente, cMaquina mq, estado st)
         {
