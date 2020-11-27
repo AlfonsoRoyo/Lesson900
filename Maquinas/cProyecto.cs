@@ -27,14 +27,14 @@ namespace p1_Motor
         }       
         estado Estado; // aqui creamos el atributo del tipo de variable
  
-       public cMaquina[] Nom1 = null; // aqui creamos el atributo del tipo de variable
+       public cMaquina Nom1 = null; // aqui creamos el atributo del tipo de variable
         
         // AQUI SE CREAN LAS PROPIEDADES.....................................................
         public string nombre { get => Nombre; set => Nombre = value; }
         public string cliente { get => Cliente; set => Cliente = value; }
         public DateTime fechaEntrada { get => FechaEntrada; set => FechaEntrada = value; }
         public DateTime fechaSalida { get => FechaSalida; set => FechaSalida = value; }
-        public cMaquina[] nom1 { get => Nom1; set => Nom1 = value; } // se genera las propiedades de la matriz nom1 para poder acceder a ella.
+        public cMaquina nom1 { get => Nom1; set => Nom1 = value; } // se genera las propiedades de la matriz nom1 para poder acceder a ella.
         
         public cProyecto() { }       
         public cProyecto( string nombre,string cliente,DateTime fechaInput, DateTime fechaOutput, cMaquina mq, estado st)
