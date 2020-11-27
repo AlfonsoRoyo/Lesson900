@@ -48,8 +48,7 @@ namespace p1_Motor
             cp1.WriteXML();                             
             cp1.ReadXML();
             Console.ReadKey();
-        }
-          
+        }         
 
     }
 
